@@ -1,13 +1,33 @@
 import React from 'react';
+import Comment from './Comment';
+import Img from './Img';
+import Video from './Video';
 
-const Post1 = () => {
+const Post = (props) => {
+    const {
+        video,
+        profilePicture,
+        profileName,
+        postImage,
+        altPostImage,
+        postVideo,
+        likesPicture,
+        likesUser,
+        likesNumber,
+        comments,
+    } = props;
+
     return (
         <div className="post">
             <div className="top">
-                <img src="./images/aranha.png" alt="aranha" />
-                <p>Homem Aranha</p>
+                <img src={profilePicture} alt={profileName} />
+                <p>{profileName}</p>
             </div>
-            <img src="./images/selfie-miranha.jpg" alt="selfie-miranha" />
+            {video ? (
+                <Video postVideo={postVideo} />
+            ) : (
+                <Img postImage={postImage} altPostImage={altPostImage} />
+            )}
             <div className="bottom">
                 <div className="icones">
                     <div className="left">
@@ -20,18 +40,15 @@ const Post1 = () => {
                     </div>
                 </div>
                 <div className="curtidas">
-                    <img src="./images/ned.jpg" alt="ned" />
+                    <img src={likesPicture} alt={likesUser} />
                     <p>
-                        Curtido por <b>nedleeds</b> e{' '}
-                        <b>outras 101.523 pessoas</b>
+                        Curtido por <b>{likesUser}</b> e{' '}
+                        <b>outras {likesNumber} pessoas</b>
                     </p>
                 </div>
-                <div className="comentarios">
-                    <p>
-                        <b>otto_octavius</b> Hello Peter{' '}
-                    </p>
-                    <ion-icon name="heart-outline"></ion-icon>
-                </div>
+                {comments.map((comment) => {
+                    return <Comment {...comment} />;
+                })}
                 <form className="comentar">
                     <input
                         type="text"
@@ -44,4 +61,4 @@ const Post1 = () => {
     );
 };
 
-export default Post1;
+export default Post;

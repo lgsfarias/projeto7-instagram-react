@@ -1,4 +1,13 @@
 import React from 'react';
+import SuggestedProfile from './SuggestedProfile';
+
+const suggestedProfiles = [
+    {
+        profilePicture: './images/agnes.jpg',
+        profileName: 'Agnes',
+        userName: 'agathaharkness',
+    },
+];
 
 const Sidebar = () => {
     return (
@@ -19,69 +28,9 @@ const Sidebar = () => {
                 </p>
             </div>
             <div className="sugeridos">
-                <div className="perfil">
-                    <div>
-                        <img src="./images/agnes.jpg" alt="perfil" />
-                        <div>
-                            <p className="@">
-                                <b>agathaharkness</b>
-                            </p>
-                            <p className="nome">Agnes</p>
-                        </div>
-                    </div>
-                    <p>Seguir</p>
-                </div>
-                <div className="perfil">
-                    <div>
-                        <img src="./images/rei-do-crime.jpg" alt="perfil" />
-                        <div>
-                            <p className="@">
-                                <b>realreidocrime</b>
-                            </p>
-                            <p className="nome">Rei do Crime</p>
-                        </div>
-                    </div>
-                    <p>Seguir</p>
-                </div>
-                <div className="perfil">
-                    <div>
-                        <img src="./images/sharon.png" alt="perfil" />
-                        <div>
-                            <p className="@">
-                                <b>mercadordopoder</b>
-                            </p>
-                            <p className="nome">Sharon Carter</p>
-                        </div>
-                    </div>
-                    <p>Seguir</p>
-                </div>
-                <div className="perfil">
-                    <div>
-                        <img src="./images/barao-zemo.png" alt="perfil" />
-                        <div>
-                            <p className="@">
-                                <b>baraozemo</b>
-                            </p>
-                            <p className="nome">Barão Zemo</p>
-                        </div>
-                    </div>
-                    <p>Seguir</p>
-                </div>
-                <div className="perfil">
-                    <div>
-                        <img
-                            src="./images/aquele-q-permanece.png"
-                            alt="perfil"
-                        />
-                        <div>
-                            <p className="@">
-                                <b>kangoconquistador</b>
-                            </p>
-                            <p className="nome">Aquele que Permanece</p>
-                        </div>
-                    </div>
-                    <p>Seguir</p>
-                </div>
+                {suggestedProfiles.map((suggestedProfile) => {
+                    return <SuggestedProfile {...suggestedProfile} />;
+                })}
                 <p className="sobre">
                     Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade •
                     Termos • Localizações • Contas mais relevantes • Hashtags •

@@ -1,20 +1,32 @@
 import React from 'react';
-import Post1 from './Post1';
-import Post2 from './Post2';
-import Post3 from './Post3';
-import Post4 from './Post4';
-import Post5 from './Post5';
+import Post from './Post';
 import Stories from './Stories';
+
+const posts = [
+    {
+        profilePicture: './images/aranha.png',
+        profileName: 'Homem Aranha',
+        postImage: './images/selfie-miranha.jpg',
+        altPostImage: 'selfie-miranha',
+        likesPicture: './images/ned.jpg',
+        likesUser: 'nedleeds',
+        likesNumber: '101.525',
+        comments: [
+            {
+                user: 'otto_octavius',
+                comment: 'Hello Peter',
+            },
+        ],
+    },
+];
 
 const Main = () => {
     return (
         <main>
             <Stories />
-            <Post1 />
-            <Post2 />
-            <Post3 />
-            <Post4 />
-            <Post5 />
+            {posts.map((post) => {
+                return <Post {...post} />;
+            })}
         </main>
     );
 };
