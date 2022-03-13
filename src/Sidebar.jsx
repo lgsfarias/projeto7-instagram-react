@@ -1,4 +1,5 @@
 import React from 'react';
+import MyProfile from './MyProfile';
 import SuggestedProfile from './SuggestedProfile';
 
 const suggestedProfiles = [
@@ -7,20 +8,38 @@ const suggestedProfiles = [
         profileName: 'Agnes',
         userName: 'agathaharkness',
     },
+    {
+        profilePicture: './images/rei-do-crime.jpg',
+        profileName: 'Rei do Crime',
+        userName: 'realreidocrime',
+    },
+    {
+        profilePicture: './images/sharon.png',
+        profileName: 'Sharon Carter',
+        userName: 'mercadordopoder',
+    },
+    {
+        profilePicture: './images/barao-zemo.png',
+        profileName: 'Barão Zemo',
+        userName: 'baraozemo',
+    },
+    {
+        profilePicture: './images/aquele-q-permanece.png',
+        profileName: 'Aquele que Permanece',
+        userName: 'kangoconquistador',
+    },
 ];
+
+const myProfile = {
+    profilePicture: './images/vigia.png',
+    profileName: 'Vigia',
+    userName: 'vigia.real',
+};
 
 const Sidebar = () => {
     return (
         <div className="side-bar">
-            <div className="meu-perfil">
-                <img src="./images/vigia.png" alt="vigia" />
-                <div>
-                    <p className="@">
-                        <b>vigia.real</b>
-                    </p>
-                    <p className="nome">Vigia</p>
-                </div>
-            </div>
+            <MyProfile {...myProfile} />
             <div className="sugestoes">
                 <p>Sugestões para você</p>
                 <p>

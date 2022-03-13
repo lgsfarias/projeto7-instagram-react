@@ -6,6 +6,42 @@ const stories = [
         profilePicture: './images/gaviao.png',
         profileName: 'Gavião Arqueiro',
     },
+    {
+        profilePicture: './images/hulk.png',
+        profileName: 'Hulk',
+    },
+    {
+        profilePicture: './images/ikaris.png',
+        profileName: 'Ikaris',
+    },
+    {
+        profilePicture: './images/shang-shi.png',
+        profileName: 'Shang-shi',
+    },
+    {
+        profilePicture: './images/wanda.png',
+        profileName: 'Wanda',
+    },
+    {
+        profilePicture: './images/falcao.png',
+        profileName: 'Capitão América',
+    },
+    {
+        profilePicture: './images/loki.png',
+        profileName: 'Loki',
+    },
+    {
+        profilePicture: './images/aranha.png',
+        profileName: 'Homem Aranha',
+    },
+    {
+        profilePicture: './images/antman.png',
+        profileName: 'Homem Formiga',
+    },
+    {
+        profilePicture: './images/peterquil.png',
+        profileName: 'Senhor das Estrelas',
+    },
 ];
 
 const Stories = () => {
