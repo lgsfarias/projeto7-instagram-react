@@ -4,7 +4,7 @@ const Comment = (props) => {
     const { user, comment } = props;
 
     return (
-        <div className="comentarios">
+        <div className="comments">
             <p>
                 <b>{user}</b> {comment}{' '}
             </p>

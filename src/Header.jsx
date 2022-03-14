@@ -6,10 +6,10 @@ const Header = () => {
             <div class="desktop-view">
                 <div class="logo">
                     <ion-icon name="logo-instagram"></ion-icon>
-                    <div class="separador-vertical"></div>
+                    <div class="vertical-line"></div>
                     <img src="./images/logo.png" alt="Instagram" />
                 </div>
-                <div class="pesquisa">
+                <div class="search">
                     <input type="text" id="txtBusca" placeholder="Pesquisar" />
                 </div>
                 <nav>

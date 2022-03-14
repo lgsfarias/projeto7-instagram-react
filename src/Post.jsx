@@ -29,7 +29,7 @@ const Post = (props) => {
                 <Img postImage={postImage} altPostImage={altPostImage} />
             )}
             <div className="bottom">
-                <div className="icones">
+                <div className="icons">
                     <div className="left">
                         <ion-icon name="heart-outline"></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
@@ -39,7 +39,7 @@ const Post = (props) => {
                         <ion-icon name="bookmark-outline"></ion-icon>
                     </div>
                 </div>
-                <div className="curtidas">
+                <div className="likes">
                     <img src={likesPicture} alt={likesUser} />
                     <p>
                         Curtido por <b>{likesUser}</b> e{' '}
@@ -49,7 +49,7 @@ const Post = (props) => {
                 {comments.map((comment) => {
                     return <Comment {...comment} />;
                 })}
-                <form className="comentar">
+                <form className="to-comment">
                     <input
                         type="text"
                         placeholder="Adicione um comentário..."

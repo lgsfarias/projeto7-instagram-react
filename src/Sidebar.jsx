@@ -40,17 +40,17 @@ const Sidebar = () => {
     return (
         <div className="side-bar">
             <MyProfile {...myProfile} />
-            <div className="sugestoes">
+            <div className="suggestions">
                 <p>Sugestões para você</p>
                 <p>
                     <b>Ver tudo</b>
                 </p>
             </div>
-            <div className="sugeridos">
+            <div className="suggested">
                 {suggestedProfiles.map((suggestedProfile) => {
                     return <SuggestedProfile {...suggestedProfile} />;
                 })}
-                <p className="sobre">
+                <p className="about">
                     Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade •
                     Termos • Localizações • Contas mais relevantes • Hashtags •
                     Idioma

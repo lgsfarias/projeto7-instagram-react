@@ -11,8 +11,6 @@ body{
 }
 header {
     z-index:10;
-    /* display: flex;
-    justify-content: center; */
     background-color: #fff;
     border: 1px solid #DBDBDB;
     position: fixed;
@@ -29,7 +27,7 @@ header>div {
     justify-content: space-between;
     align-items: center;
 }
-.pesquisa > input {
+.search > input {
     width: 215px;
     height: 26px;
     font-style: normal;
@@ -56,7 +54,7 @@ header>div {
     height: 29px;
     width: 103px;
 }
-.logo>.separador-vertical{
+.logo>.vertical-line{
     background-color: #EBEDEF;
     height: 22px;
     width: 1px;
@@ -73,7 +71,7 @@ nav {
 nav > ion-icon {
     font-size: 19.25px;
 }
-.separador-vertical{
+.vertical-line{
     background-color: #EBEDEF;
     height: 22px;
     width: 1px;
@@ -81,26 +79,21 @@ nav > ion-icon {
 .container {
     margin:34px auto;
     margin-top: 88px;
-    /* background-color: rgba(200,0,0,0.25); */
     width: 936px;
-    /* height: 2000px; */
     display: flex;
     justify-content: space-between;
 }
 main {
-    /* background-color: rgba(0,200,0,0.25); */
     width: 614px;
-    /* height: 2000px; */
     display: flex;
     flex-direction: column;
 }
-.caixa-de-stories {
+.story-box {
     background: #FFFFFF;
     border: 1px solid #DBDBDB;
     box-sizing: border-box;
     border-radius: 3px;
     padding-left: 19px;
-    /* background-color: rgba(0,0,200,0.25); */
     width: 614px;
     height: 118px;
     margin-bottom: 24px;
@@ -109,7 +102,7 @@ main {
     overflow-x: hidden;
     position: relative;
 }
-.caixa-de-stories>.setinha{
+.story-box>.arrow{
     z-index: 9;
     width: 26px;
     height: 26px;
@@ -119,7 +112,7 @@ main {
     box-shadow: 1px 2px 1px rgba(100,100,100,0.2); ;
     background-color: rgba(0,0,0,0.2);
 }
-.storie>p{
+.story>p{
     font-size: 12px;
     line-height: 14px;
     text-align: center;
@@ -131,7 +124,7 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.storie {
+.story {
 
     height: 82px;
     margin-right: 16px;
@@ -151,7 +144,7 @@ main {
     background:linear-gradient(to right top, #fc994d, #c92d92);
     border-radius: 50%;
 }
-.storie>.box>img {
+.story>.box>img {
     width: 56px;
     height: 56px;
     border : 2px solid transparent;
@@ -166,8 +159,6 @@ main {
     box-sizing: border-box;
     border-radius: 3px;
     width: 614px;
-    /* width: 100%; */
-    /* height: 749px; */
     margin-bottom: 60px;
 }
 .post>.top{
@@ -196,106 +187,104 @@ main {
 .post>video{
     width: 100%;
 }
-.icones {
+.icons
+ {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: red; */
     width: 612px;
     height: 42px;
-    /* height: 612px; */
 }
-.icones ion-icon {
+.icons
+ ion-icon {
     font-size: 18px;
     
 }
-.icones>.left{
-    /* background-color: blue; */
+.icons
+>.left{
     margin-left:18px; 
     display: flex;
     align-items: center;  
 }
-.icones>.left>ion-icon{
+.icons
+>.left>ion-icon{
     margin-right: 18px;
 }
-.icones>.right {
-    /* background-color: blue; */
+.icons
+>.right {
     margin-right: 18px;
     display: flex;
     align-items: center;  
 }
-.curtidas{
+.likes{
     display: flex;
     align-items: center;
     padding: 0 0 14px 0;
 }
-.curtidas>img{
+.likes>img{
     border-radius: 50%;
     width: 20px;
     height: 20px;
     margin-left: 17px;
 }
-.curtidas>p{
+.likes>p{
     margin-left: 5px;
     font-size: 1.4rem;
 }
-.comentarios{
+.comments{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 0 14px 0;
 }
-.comentarios>p{
+.comments>p{
     margin-left: 17px;
     font-size: 1.4rem;
 }
-.comentarios>ion-icon{
+.comments>ion-icon{
     margin-left: 17px;
     font-size: 1.4rem;
     margin-right: 21px;
 }
-.comentar{
+.to-comment{
     height: 50px;
     border-top: 1px solid #DBDBDB;
     display: flex;
     justify-content: space-between;
 }
-.comentar input[type="text"] {
+.to-comment input[type="text"] {
     width: 100%;
     border:none;
     background-color: rgba(255,255,255,0);
     margin-left: 17px;
 }
-.comentar input[type="button"] {
+.to-comment input[type="button"] {
     color: #B2DFFC;
     border:none;
     background-color: rgba(255,255,255,0);
     margin-right: 15px;
     transition:300ms;
 }
-.comentar input[type="button"]:hover{
+.to-comment input[type="button"]:hover{
     color:#0095F6;
 }
 .side-bar {
-    /* background-color: rgba(0,0,200,0.25); */
     position:fixed;
     right: calc( calc(100vw - 936px) / 2 );
     width: 292px;
     height: 466px;
 }
-.meu-perfil {
+.my-profile {
     height: 102px;
-    /* background-color: pink; */
     display: flex;
     align-items: center;
 }
-.meu-perfil>img {
+.my-profile>img {
     margin-right: 17px;
     width: 56px;
     height: 56px;
 }
-.meu-perfil>div {
-    /* background-color: rgba(0,0,200,0.25); */
+.my-profile>div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -305,7 +294,7 @@ main {
     font-size: 14px;
     line-height: 16px;
 }
-.sugestoes{
+.suggestions{
     display: flex;
     justify-content: space-between;
     font-style: normal;
@@ -314,34 +303,34 @@ main {
     line-height: 14px;
     margin-bottom: 18px;
 }
-.sugeridos>.perfil{
+.suggested>.profile{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 32px;
     margin-bottom: 18px;
 }
-.sugeridos>.perfil>div{
+.suggested>.profile>div{
     display: flex;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
 }
-.sugeridos>.perfil>div>img{
+.suggested>.profile>div>img{
     height: 32px;
     width: 32px;
     border-radius: 50%;
     margin-right: 11px;
 }
-.sugeridos>.perfil>p{
+.suggested>.profile>p{
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
     color: #139EF2;
 }
-.side-bar .nome {
+.side-bar .name {
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -350,7 +339,7 @@ main {
     align-items: center;
     color: #262626;
 }
-.sobre {
+.about {
     margin-top: 33px;
     font-style: normal;
     font-weight: normal;
@@ -423,7 +412,7 @@ footer {
     header .mobile-view{
         display: flex;
     }
-    .setinha{
+    .arrow{
         display: none;
     }
     .logo , nav {
@@ -435,7 +424,7 @@ footer {
     .container {
         margin-top: 54px;
     }
-    .caixa-de-stories {
+    .story-box {
         background: none;
         border: none;
         width: 100%;
@@ -456,7 +445,8 @@ footer {
     .post>video {
         width: 100%;
     }
-    .icones {
+    .icons
+     {
         width: 100%;
     }
     footer {

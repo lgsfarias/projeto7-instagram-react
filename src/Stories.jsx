@@ -46,8 +46,8 @@ const stories = [
 
 const Stories = () => {
     return (
-        <div class="caixa-de-stories">
-            <img class="setinha" src="./images/Vector.png" alt="setinha" />
+        <div class="story-box">
+            <img class="arrow" src="./images/Vector.png" alt="setinha" />
             {stories.map((story) => {
                 return <Story {...story} />;
             })}
